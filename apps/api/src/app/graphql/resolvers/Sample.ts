@@ -61,7 +61,7 @@ export class SampleResolver {
   @Subscription()
   async sampleSubscription(@CurrentUser() user: RequestUser) {
     logger.log(`sampleSubscription subscribed to by user with id ${user.id}`);
-    return pubSub.asyncIterator('sampleSubscription');
+    return pubSub.asyncIterableIterator('sampleSubscription');
   }
 
   @Mutation()
